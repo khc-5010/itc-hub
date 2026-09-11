@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ITC Program Hub</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Spline+Sans+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #F6F5F1; font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; color: #14243D; }
+    a { color: #1E407C; } a:hover { color: #2F6FBA; }
+    a:focus-visible { outline: 2px solid #2F6FBA; outline-offset: 2px; }
+    .mono { font-family: 'Spline Sans Mono', Consolas, ui-monospace, monospace; }
+    .disp { font-family: Archivo, 'Helvetica Neue', Arial, sans-serif; }
+    .eyebrow { font-family: 'Spline Sans Mono', Consolas, ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+    .num { font-variant-numeric: tabular-nums; }
+    .card { background: #FFFFFF; border: 1px solid #E3E1D9; border-radius: 4px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 3px 10px; font-family: 'Spline Sans Mono', Consolas, ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+    .chip-filled { background: #1E407C; color: #FFFFFF; }
+    .chip-line { background: #FFFFFF; color: #1E407C; border: 1px solid #B9C6DD; }
+    .chip-muted { background: #ECEAE3; color: #5B6B84; }
+    .chip-good { background: #E7F0EB; color: #2E7D5B; border: 1px solid #C7DCD0; }
+    .pill { display: inline-block; border: 1px solid #E3E1D9; border-radius: 999px; padding: 4px 12px; font-size: 12px; color: #3A4A66; background: #FBFAF7; white-space: nowrap; }
+    .rail { display: flex; position: relative; min-width: 640px; }
+    .rail::before { content: ''; position: absolute; top: 7px; left: 24px; right: 24px; height: 2px; background: #E3E1D9; }
+    .node { flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+    .dot { width: 15px; height: 15px; border-radius: 50%; background: #FFFFFF; border: 2px solid #C9CDD6; box-sizing: border-box; position: relative; z-index: 1; }
+    .dot-done { background: #1E407C; border-color: #1E407C; }
+    .dot-now { border-color: #1E407C; box-shadow: 0 0 0 4px rgba(47, 111, 186, 0.18); animation: pulse 2.4s ease-in-out infinite; }
+    .dot-now::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: #2F6FBA; }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(47,111,186,0.10); } 50% { box-shadow: 0 0 0 6px rgba(47,111,186,0.22); } }
+    @media (prefers-reduced-motion: reduce) { .dot-now { animation: none; } }
+    .m-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #3A4A66; line-height: 1.3; }
+    .m-date { font-family: 'Spline Sans Mono', Consolas, ui-monospace, monospace; font-size: 11px; color: #7A8699; }
+    .stage-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding: 20px 0; border-top: 1px solid #E3E1D9; }
+    @media (max-width: 720px) { .stage-row { grid-template-columns: 1fr; gap: 10px; } }
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px 28px; }
+    .fact-k { font-family: 'Spline Sans Mono', Consolas, ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #7A8699; margin-bottom: 4px; }
+    .fact-v { font-size: 13.5px; line-height: 1.5; color: #14243D; }
+    h1, h2, h3 { text-wrap: balance; margin: 0; }
+    p { margin: 0; }
+  </style>
+</head>
+<body>
+<div style="background: #F6F5F1; min-height: 100%; width: 100%;">
+
+  <!-- Masthead -->
+  <div style="background: #14243D; color: #FFFFFF;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 34px 32px 30px 32px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="eyebrow" style="color: #9DB4D6;">Innovation Through Collaboration &middot; Black School of Business &middot; Penn State Behrend</div>
+        <h1 class="disp" style="font-size: 46px; font-weight: 800; letter-spacing: -0.01em; line-height: 1; color: #FFFFFF;">ITC Program Hub</h1>
+        <p style="font-size: 14px; color: #C7D2E4; max-width: 560px; line-height: 1.55;">Student consulting engagements that deliver research, strategy, working AI tools, and a knowledge base the client keeps.</p>
+      </div>
+      <div style="text-align: right; display: flex; flex-direction: column; gap: 4px;">
+        <div class="eyebrow" style="color: #9DB4D6;">This month</div>
+        <div class="disp" style="font-size: 28px; font-weight: 700; color: #FFFFFF;">September 2026</div>
+        <div class="mono" style="font-size: 11.5px; color: #8FA3C4;">updated Sept 11, 2026</div>
+      </div>
+    </div>
+    <div style="height: 3px; background: #1E407C;"></div>
+  </div>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 0 32px 48px 32px;">
+
+    <!-- Stat strip -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; padding: 30px 0 34px 0;">
+      <div style="border-top: 2px solid #1E407C; padding-top: 12px;">
+        <div class="eyebrow" style="color: #7A8699;">In flight</div>
+        <div class="disp num" style="font-size: 36px; font-weight: 800; margin-top: 4px;">1</div>
+        <div style="font-size: 12.5px; color: #5B6B84; margin-top: 2px;">Erie Regional Chamber, starts Sept 21</div>
+      </div>
+      <div style="border-top: 2px solid #1E407C; padding-top: 12px;">
+        <div class="eyebrow" style="color: #7A8699;">On deck</div>
+        <div class="disp num" style="font-size: 36px; font-weight: 800; margin-top: 4px;">1</div>
+        <div style="font-size: 12.5px; color: #5B6B84; margin-top: 2px;">JPS Signs, scoping the direction</div>
+      </div>
+      <div style="border-top: 2px solid #1E407C; padding-top: 12px;">
+        <div class="eyebrow" style="color: #7A8699;">Warm prospects</div>
+        <div class="disp num" style="font-size: 36px; font-weight: 800; margin-top: 4px;">1</div>
+        <div style="font-size: 12.5px; color: #5B6B84; margin-top: 2px;">Erie Art Museum, timing is theirs</div>
+      </div>
+      <div style="border-top: 2px solid #2E7D5B; padding-top: 12px;">
+        <div class="eyebrow" style="color: #7A8699;">FY26 annual goal</div>
+        <div class="disp" style="font-size: 36px; font-weight: 800; margin-top: 4px; color: #2E7D5B;">Met</div>
+        <div style="font-size: 12.5px; color: #5B6B84; margin-top: 2px;">2 delivered of 2 target</div>
+      </div>
+      <div style="border-top: 2px solid #1E407C; padding-top: 12px;">
+        <div class="eyebrow" style="color: #7A8699;">Committed this fall</div>
+        <div class="disp num" style="font-size: 36px; font-weight: 800; margin-top: 4px;">$2,000</div>
+        <div style="font-size: 12.5px; color: #5B6B84; margin-top: 2px;">Full standard ask, no subsidy needed</div>
+      </div>
+    </div>
+
+    <!-- Spotlight -->
+    <div class="eyebrow" style="color: #7A8699; margin-bottom: 12px;">In flight &middot; Fall 2026</div>
+    <div class="card" style="box-shadow: 0 10px 30px rgba(20, 36, 61, 0.08); padding: 28px; display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: baseline;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <h2 class="disp" style="font-size: 26px; font-weight: 700;">Erie Regional Chamber and Growth Partnership</h2>
+          <span class="chip chip-filled">Accepted &middot; starts Sept 21</span>
+        </div>
+        <div class="mono num" style="font-size: 14px; color: #3A4A66;">$2,000 &middot; 8 weeks &middot; 2 students</div>
+      </div>
+
+      <p style="font-size: 14.5px; line-height: 1.65; color: #2A3A55; max-width: 74ch;">
+        Phase 1 of the Chamber's Erie 300 place-brand work: a fully sourced evidence base on how the
+        Erie region actually performs, how it is perceived from outside, and one to three positioning
+        themes the data genuinely supports. Built from public and published data only; message testing
+        with real audiences is a designed later phase, not a gap.
+      </p>
+
+      <div class="facts">
+        <div>
+          <div class="fact-k">Client</div>
+          <div class="fact-v">Brandon Mendoza, President and CEO. Introduced by Chancellor Ralph Ford.</div>
+        </div>
+        <div>
+          <div class="fact-k">Student team</div>
+          <div class="fact-v">Davis Minder confirmed. Second seat closing this month.</div>
+        </div>
+        <div>
+          <div class="fact-k">Faculty</div>
+          <div class="fact-v">Kyle Chalupczynski, advising. Kevin Pratt on positioning from mid&#8209;October. Ken Louie's ERIE institute on economic data.</div>
+        </div>
+        <div>
+          <div class="fact-k">Delivers</div>
+          <div class="fact-v">Final presentation to the Chamber the week of November 16, 2026.</div>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto; padding: 6px 2px 2px 2px;">
+        <div class="rail">
+          <div class="node">
+            <div class="dot dot-done"></div>
+            <div class="m-label">Proposal accepted</div>
+            <div class="m-date">Sept 11</div>
+          </div>
+          <div class="node">
+            <div class="dot dot-now"></div>
+            <div class="m-label" style="color: #1E407C;">Signature + team</div>
+            <div class="m-date">wk of Sept 14</div>
+          </div>
+          <div class="node">
+            <div class="dot"></div>
+            <div class="m-label">Work begins</div>
+            <div class="m-date">Sept 21</div>
+          </div>
+          <div class="node">
+            <div class="dot"></div>
+            <div class="m-label">Interim findings</div>
+            <div class="m-date">wk of Oct 12</div>
+          </div>
+          <div class="node">
+            <div class="dot"></div>
+            <div class="m-label">Data closes</div>
+            <div class="m-date">Oct 30</div>
+          </div>
+          <div class="node">
+            <div class="dot"></div>
+            <div class="m-label">Presentation</div>
+            <div class="m-date">wk of Nov 16</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <span class="pill">Sourced fact base</span>
+        <span class="pill">Peer-metro benchmark</span>
+        <span class="pill">Outside-perception read</span>
+        <span class="pill">1&#8211;3 positioning themes</span>
+        <span class="pill">AI research assistant</span>
+        <span class="pill">Knowledge repository</span>
+        <span class="mono" style="font-size: 10.5px; color: #7A8699; letter-spacing: 0.1em; text-transform: uppercase; margin-left: auto;">SDG: Quality Education &middot; Decent Work and Economic Growth</span>
+      </div>
+    </div>
+
+    <!-- Decisions needed -->
+    <div style="margin-top: 36px; background: #FCF8F1; border: 1px solid #EADFC8; border-top: 2px solid #B0651A; border-radius: 4px; padding: 22px 26px;">
+      <div class="eyebrow" style="color: #B0651A; margin-bottom: 16px;">Open items for this month's conversation</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px;">
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <div style="font-size: 14px; font-weight: 700;">Second student seat</div>
+          <p style="font-size: 13px; line-height: 1.55; color: #4A5A74;">One of two Chamber seats is filled. Need a confirmed student by the end of September to hold the eight-week scope.</p>
+          <div style="font-size: 12.5px; color: #B0651A; font-weight: 600;">Helps: candidate referrals, MIS or Marketing, comfortable with data.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <div style="font-size: 14px; font-weight: 700;">Countersigned proposal</div>
+          <p style="font-size: 13px; line-height: 1.55; color: #4A5A74;">Brandon accepted by email Sept 11. Signature copy is with the Chamber, along with naming a single deliverable approver.</p>
+          <div style="font-size: 12.5px; color: #B0651A; font-weight: 600;">Helps: nothing needed, tracking only.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 5px;">
+          <div style="font-size: 14px; font-weight: 700;">ERIE support in writing</div>
+          <p style="font-size: 13px; line-height: 1.55; color: #4A5A74;">The proposal names the Economic Research Institute of Erie on the data work. Verbally confirmed; written confirmation requested.</p>
+          <div style="font-size: 12.5px; color: #B0651A; font-weight: 600;">Helps: nothing needed, tracking only.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div style="margin-top: 44px;">
+      <h2 class="disp" style="font-size: 22px; font-weight: 700; margin-bottom: 18px;">Pipeline</h2>
+
+      <div class="stage-row">
+        <div><span class="chip chip-line">Scoping</span></div>
+        <div class="card" style="padding: 18px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 16px; font-weight: 700;">JPS Signs</div>
+            <div class="mono" style="font-size: 11.5px; color: #7A8699;">referred by Ozgun Demirag</div>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #4A5A74; max-width: 74ch;">Erie-based wholesale manufacturer of dimensional signage, roughly doubled since 2019. Narrowing between B2B channel marketing and production capacity before proposing; pre-proposal survey with the client now. Target: late Fall 2026 or Spring 2027.</p>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div><span class="chip chip-line" style="color: #5B6B84; border-color: #D5D2C8;">Prospect</span></div>
+        <div class="card" style="padding: 18px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 16px; font-weight: 700;">Erie Art Museum</div>
+            <div class="mono" style="font-size: 11.5px; color: #7A8699;">referred by Eric Robbins</div>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #4A5A74; max-width: 74ch;">Workflow automation concepts researched and ready. Timing is the museum's; keeping the conversation warm rather than pressing.</p>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div><span class="chip chip-muted">Not pursuing</span></div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="card" style="padding: 18px 22px; display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+              <div style="font-size: 16px; font-weight: 700;">St. James Place</div>
+              <div class="mono" style="font-size: 11.5px; color: #7A8699;">inbound, Sept 2026</div>
+            </div>
+            <p style="font-size: 13.5px; line-height: 1.6; color: #4A5A74; max-width: 74ch;">Parish event venue seeking promotion and booking management. The need is an ongoing operations role rather than an eight-week scope. Declining warmly and passing along no-cost distribution and catering-partnership advice.</p>
+          </div>
+          <p style="font-size: 12.5px; color: #7A8699; line-height: 1.6;">Six opportunities since early 2025 were evaluated and declined or redirected where the fit was wrong. Saying no is how the program protects faculty capacity and the eight-week model.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivered -->
+    <div style="margin-top: 44px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+        <div style="max-width: 560px;">
+          <h2 class="disp" style="font-size: 22px; font-weight: 700;">Delivered and in use</h2>
+          <p style="font-size: 13px; color: #5B6B84; margin-top: 6px; line-height: 1.6;">The honest measure of an engagement is whether the client still uses what students built months later.</p>
+        </div>
+        <div>
+          <div class="eyebrow" style="color: #7A8699; margin-bottom: 6px;">Program donations by fiscal year</div>
+          <svg width="250" height="114" viewBox="0 0 250 114" role="img" aria-label="Donations: FY25 $2,500, FY26 $4,000, FY27 $2,000 committed to date">
+            <line x1="8" y1="94" x2="242" y2="94" stroke="#E3E1D9" stroke-width="1"></line>
+            <g>
+              <title>FY25: $2,500 (reCAP Mason Jars)</title>
+              <rect x="30" y="49" width="42" height="45" rx="3" fill="#1E407C"></rect>
+              <text x="51" y="43" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="11" fill="#14243D">2,500</text>
+              <text x="51" y="108" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="10" fill="#7A8699">FY25</text>
+            </g>
+            <g>
+              <title>FY26: $4,000 (Plastikos, Erie Brewing)</title>
+              <rect x="104" y="22" width="42" height="72" rx="3" fill="#1E407C"></rect>
+              <text x="125" y="16" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="11" fill="#14243D">4,000</text>
+              <text x="125" y="108" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="10" fill="#7A8699">FY26</text>
+            </g>
+            <g>
+              <title>FY27: $2,000 committed to date (Erie Regional Chamber)</title>
+              <rect x="178" y="58" width="42" height="36" rx="3" fill="#9DB4D6"></rect>
+              <text x="199" y="52" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="11" fill="#14243D">2,000</text>
+              <text x="199" y="108" text-anchor="middle" font-family="Spline Sans Mono, Consolas, monospace" font-size="10" fill="#7A8699">FY27*</text>
+            </g>
+          </svg>
+          <div class="mono" style="font-size: 10px; color: #7A8699; text-align: right;">*committed to date &middot; donations to the program, not fees</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+        <div class="card" style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 15.5px; font-weight: 700;">Erie Brewing Company</div>
+            <span class="chip chip-good">In use</span>
+          </div>
+          <div class="mono num" style="font-size: 11.5px; color: #7A8699;">Spring 2026 &middot; 8 weeks &middot; $2,000 &middot; 1 student</div>
+          <p style="font-size: 13px; line-height: 1.6; color: #4A5A74;">"Find My Beer" store-locator web app with mapping, distance filtering, and a maintained knowledge repository. Built by Aaron Bohley; the app is live and in use.</p>
+        </div>
+        <div class="card" style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 15.5px; font-weight: 700;">Plastikos / Micro Mold</div>
+            <span class="chip chip-good">In use</span>
+          </div>
+          <div class="mono num" style="font-size: 11.5px; color: #7A8699;">Fall 2025 &#8594; June 2026 &middot; $2,000 initial</div>
+          <p style="font-size: 13px; line-height: 1.6; color: #4A5A74;">Brand-voice content assistant and research repository, then three follow-on AI systems across two departments. The trigger-event sales intelligence tool was in active use through June 2026.</p>
+        </div>
+        <div class="card" style="padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline;">
+            <div style="font-size: 15.5px; font-weight: 700;">reCAP Mason Jars</div>
+            <span class="chip chip-good">Returned</span>
+          </div>
+          <div class="mono num" style="font-size: 11.5px; color: #7A8699;">Spring 2025 &middot; 16 weeks &middot; $2,500 &middot; 2 students</div>
+          <p style="font-size: 13px; line-height: 1.6; color: #4A5A74;">Digital marketing strategy: TikTok launch, Amazon storefront optimization, buyer personas, email automation. The client came back that fall with a second engagement concept.</p>
+        </div>
+      </div>
+
+      <!-- Case study band -->
+      <div style="margin-top: 20px; background: #14243D; border-radius: 4px; padding: 26px 30px; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 26px; align-items: center; justify-content: space-between;">
+        <div style="max-width: 520px; display: flex; flex-direction: column; gap: 8px;">
+          <div class="eyebrow" style="color: #9DB4D6;">What one engagement becomes</div>
+          <p style="font-size: 14px; line-height: 1.65; color: #DCE4F0;">Plastikos began as a single eight-week, $2,000 project. Because the deliverables were working AI tools rather than a report, the work grew on its own: a second department asked for its own assistant, then a sales-intelligence system. That expansion pattern is the program's core argument.</p>
+        </div>
+        <div style="display: flex; gap: 34px; flex-wrap: wrap;">
+          <div style="text-align: center;">
+            <div class="disp num" style="font-size: 34px; font-weight: 800; color: #FFFFFF;">1</div>
+            <div class="eyebrow" style="color: #8FA3C4;">engagement</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="disp num" style="font-size: 34px; font-weight: 800; color: #FFFFFF;">4</div>
+            <div class="eyebrow" style="color: #8FA3C4;">AI systems</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="disp num" style="font-size: 34px; font-weight: 800; color: #FFFFFF;">2</div>
+            <div class="eyebrow" style="color: #8FA3C4;">departments</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="disp num" style="font-size: 34px; font-weight: 800; color: #FFFFFF;">9</div>
+            <div class="eyebrow" style="color: #8FA3C4;">months</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 12.5px; color: #7A8699; margin-top: 16px; line-height: 1.6;">Cross-school: the program's advising assistant was adapted for the School of Engineering's senior design capstone and delivered as Senior Design Buddy.</p>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 44px; border-top: 1px solid #E3E1D9; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline;">
+      <p style="font-size: 12px; color: #7A8699; line-height: 1.6; max-width: 60ch;">Maintained from the ITC program records; this page is refreshed whenever pipeline state changes. Figures are donations to the program that fund student stipends, faculty advising, and AI tooling.</p>
+      <p style="font-size: 12px; color: #5B6B84;">Kyle Chalupczynski, director &middot; Kevin Pratt, co-lead &middot; <a href="mailto:khc5010@psu.edu" style="text-decoration: none;">khc5010@psu.edu</a></p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
